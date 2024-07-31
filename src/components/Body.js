@@ -19,7 +19,7 @@ const filterData=(searchText,restaurants)=>{
    
   
 }
-
+let len=0;
 const Body =()=>{
   const [searchText,setSearchText]=useState();
   const [filterrestaurants,setfilterRestaurants]=useState([]);
@@ -68,7 +68,8 @@ const Body =()=>{
         <div className="restaurant-list">
         {
           filterrestaurants.map((resturant)=>{
-              return <RestaurantCard {...resturant.info } keys={resturant.info.id}/>
+            
+              return <RestaurantCard {...resturant?.info } keys={len++}/>
             
           }
         )

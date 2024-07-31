@@ -1,0 +1,128 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    border: 1px solid black;
+}
+
+.nav-items > ul{
+    list-style: none;
+    margin-right:10px;
+    display: flex;
+}
+
+.nav-items >ul>a{
+    text-decoration: none;
+    color:black;
+    padding: 10px;
+    margin-top: 20px;
+    cursor: default;
+}
+
+.nav-items > ul >li{
+    padding: 10px;
+}
+
+.logo{
+    width: 90px;
+}
+
+.card{
+    display: flex;
+    width: 220px;
+    height: auto;
+    padding: 5px;
+    margin: 10px;
+    font-size: 15px;
+}
+
+
+.card >img{
+    width: 200px;
+    height: 200px;
+    /* padding: 10px; */
+}
+
+.restaurant-list{
+    display: flex;
+    flex-wrap: wrap;
+    
+    
+  
+}
+
+.footer{
+    border: 1px solid black;
+    display: flex;
+    margin: 10px;
+    justify-content: center;
+    background-color: #090979;
+    color: #fff;
+}
+
+.search,.search-btn{
+    margin: .5rem;
+    
+}
+.search-btn{
+    background-color: rgb(47, 180, 47);
+    padding: 5px;
+    justify-content: center;
+    padding-inline: 30px;
+}
+
+.error{
+    font-size: 100px;
+    text-align: center;
+    padding-top: 12%;
+}
+
+
+.shimmercard{
+    display: flex;
+    width: 220px;
+    height: 331.6px;
+    padding: 5px;
+    margin: 10px;
+    font-size: 15px;
+    border: 1px solid black;
+    background-color: rgba(131, 139, 147, 0.473);
+}
+
+.shimmer-search{
+    margin: .5rem;   
+    color: rgba(131, 139, 147, 0.473);
+    ::placeholder{
+        color: rgba(131, 139, 147, 0.473);
+    }
+}
+
+
+.shimmer-search-btn{
+    margin: .5rem;
+    background-color: rgba(131, 139, 147, 0.473);
+    padding-top: 35.2px;
+    justify-content: center;
+    padding-inline: 54.2px;
+}
+
+.shimmer-header{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    border: 1px solid black;
+    padding-top: 90px;
+    background-color: rgba(131, 139, 147, 0.473);
+    
+}
+
+.shimmer-footer{
+    border: 1px solid black;
+    display: flex;
+    padding-top: 70px;
+    margin: 10px;
+    background-color: rgba(131, 139, 147, 0.473);
+  
+}
+
+/*# sourceMappingURL=/App.d36a57b6.css.map */

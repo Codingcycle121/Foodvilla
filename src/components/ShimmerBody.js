@@ -2,8 +2,9 @@ import './shimmer.css'
 import React from "react";
 const ShimmerBody=()=>{
 
+   let len=0;
     const mapped= Array.from({length :20}).map((el)=>{
-       return <div className="shimmercard"/>
+       return <div className="shimmercard" key={len++}/>
     })
    
 
