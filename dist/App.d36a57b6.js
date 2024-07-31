@@ -39020,10 +39020,9 @@ var ShimmerBody = function ShimmerBody() {
     });
   });
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-search"
-  }, /*#__PURE__*/_react.default.createElement("input", {
-    type: "text",
-    placeholder: ""
+    className: "Shimmer-search"
+  }, /*#__PURE__*/_react.default.createElement("p", {
+    className: "shimmer-search1"
   })), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("button", {
     className: "shimmer-search-btn"
   })), /*#__PURE__*/_react.default.createElement("div", {
@@ -39171,10 +39170,9 @@ var Shimmer = function Shimmer() {
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
     className: "shimmer-header"
   }), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-search"
-  }, /*#__PURE__*/_react.default.createElement("input", {
-    type: "text",
-    placeholder: ""
+    className: "Shimmer-search"
+  }, /*#__PURE__*/_react.default.createElement("p", {
+    className: "shimmer-search1"
   })), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("button", {
     className: "shimmer-search-btn"
   })), /*#__PURE__*/_react.default.createElement("div", {

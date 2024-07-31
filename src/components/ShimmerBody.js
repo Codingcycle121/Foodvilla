@@ -13,8 +13,8 @@ const ShimmerBody=()=>{
         <>
          
         
-        <div className='shimmer-search'>
-        <input type='text' placeholder=''/>
+         <div className='Shimmer-search'>
+        <p className='shimmer-search1'></p>
         </div>
         <div >
             <button className='shimmer-search-btn'></button>

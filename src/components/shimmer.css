@@ -12,9 +12,14 @@
 .shimmer-search{
     margin: .5rem;   
     color: rgba(131, 139, 147, 0.473);
-    ::placeholder{
-        color: rgba(131, 139, 147, 0.473);
-    }
+}
+
+.shimmer-search1{
+    margin: .5rem;   
+    background-color: rgba(131, 139, 147, 0.473);
+    padding: 14px;
+    margin-right: 87%;
+    border: 1px solid black;
 }
 
 
@@ -44,3 +49,4 @@
     background-color: rgba(131, 139, 147, 0.473);
   
 }
+

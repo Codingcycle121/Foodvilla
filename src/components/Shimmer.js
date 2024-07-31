@@ -13,8 +13,8 @@ let len=0;
         <>
          
         <div className='shimmer-header'></div>
-        <div className='shimmer-search'>
-        <input type='text' placeholder=''/>
+        <div className='Shimmer-search'>
+        <p className='shimmer-search1'></p>
         </div>
         <div >
             <button className='shimmer-search-btn'></button>
