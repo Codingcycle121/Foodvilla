@@ -5,7 +5,7 @@ const Header= () =>
         return  (
             <>
             <div className="header">
-             <img className="logo" alt="logo" src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnm9yURneW64_3Ci5fRm1dsvfCIiyj2Ox8KQ&s"}/>
+             <img className="logo" alt="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnm9yURneW64_3Ci5fRm1dsvfCIiyj2Ox8KQ&s"/>
              <div className="nav-items">
              <ul>
                 <a href="/"><li>Home</li></a>

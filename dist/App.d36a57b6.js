@@ -38417,9 +38417,37 @@ exports.default = void 0;
 var _react = _interopRequireDefault(require("react"));
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
 var Footer = function Footer() {
-  return /*#__PURE__*/_react.default.createElement("div", {
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
     className: "footer"
-  }, /*#__PURE__*/_react.default.createElement("h1", null, "footer"));
+  }, /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("p", null, "For better experience,download Foodvilla app now")), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("img", {
+    src: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/portal/m/play_store.png",
+    alt: "google-play",
+    className: "footer-img"
+  }), /*#__PURE__*/_react.default.createElement("img", {
+    src: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/portal/m/app_store.png",
+    alt: "app-store",
+    className: "footer-img"
+  }))), /*#__PURE__*/_react.default.createElement("div", {
+    className: "footer2"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "footlogo"
+  }, /*#__PURE__*/_react.default.createElement("img", {
+    className: "footer-logo",
+    alt: "logo",
+    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnm9yURneW64_3Ci5fRm1dsvfCIiyj2Ox8KQ&s"
+  })), /*#__PURE__*/_react.default.createElement("div", {
+    className: "company"
+  }, /*#__PURE__*/_react.default.createElement("ul", {
+    className: "company-1"
+  }, /*#__PURE__*/_react.default.createElement("li", null, " ", /*#__PURE__*/_react.default.createElement("div", {
+    className: "companylogo"
+  }, "Company"), " "), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("div", null, "About")), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("div", null, "Carrers")), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("div", null, "Team")))), /*#__PURE__*/_react.default.createElement("div", {
+    className: "contact"
+  }, /*#__PURE__*/_react.default.createElement("ul", {
+    className: "company-1"
+  }, /*#__PURE__*/_react.default.createElement("li", null, " ", /*#__PURE__*/_react.default.createElement("div", {
+    className: "companylogo"
+  }, "Contact Us"), " "), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("div", null, "Help & Support")), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("div", null, "Partern with us")), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("div", null, "Ride with us"))))));
 };
 var _default = exports.default = Footer;
 },{"react":"node_modules/react/index.js"}],"src/components/About.js":[function(require,module,exports) {
@@ -39329,7 +39357,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52678" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54285" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
