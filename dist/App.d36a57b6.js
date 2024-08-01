@@ -38386,28 +38386,35 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 var _react = _interopRequireDefault(require("react"));
+var _reactRouterDom = require("react-router-dom");
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
 var Header = function Header() {
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
     className: "header"
+  }, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    to: "/"
   }, /*#__PURE__*/_react.default.createElement("img", {
     className: "logo",
     alt: "logo",
     src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnm9yURneW64_3Ci5fRm1dsvfCIiyj2Ox8KQ&s"
-  }), /*#__PURE__*/_react.default.createElement("div", {
+  })), /*#__PURE__*/_react.default.createElement("div", {
     className: "nav-items"
-  }, /*#__PURE__*/_react.default.createElement("ul", null, /*#__PURE__*/_react.default.createElement("a", {
-    href: "/"
-  }, /*#__PURE__*/_react.default.createElement("li", null, "Home")), /*#__PURE__*/_react.default.createElement("a", {
-    href: "/about"
-  }, /*#__PURE__*/_react.default.createElement("li", null, "About")), /*#__PURE__*/_react.default.createElement("a", {
-    href: "/contact"
-  }, /*#__PURE__*/_react.default.createElement("li", null, "Contact")), /*#__PURE__*/_react.default.createElement("a", {
-    href: "/cart"
+  }, /*#__PURE__*/_react.default.createElement("ul", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    className: "item",
+    to: "/"
+  }, /*#__PURE__*/_react.default.createElement("li", null, "Home")), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    className: "item",
+    to: "/about"
+  }, /*#__PURE__*/_react.default.createElement("li", null, "About")), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    className: "item",
+    to: "/contact"
+  }, /*#__PURE__*/_react.default.createElement("li", null, "Contact")), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    className: "item",
+    to: "/cart"
   }, /*#__PURE__*/_react.default.createElement("li", null, "Carts"))))));
 };
 var _default = exports.default = Header;
-},{"react":"node_modules/react/index.js"}],"src/components/Footer.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/dist/index.js"}],"src/components/Footer.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -39357,7 +39364,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54285" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62028" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
