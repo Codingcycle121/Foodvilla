@@ -16,14 +16,14 @@ background-image: linear-gradient(to right, #fdbb2d,#22c1c3);
 } */
 
 body{
-    /* background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1)); */
-    background-image: linear-gradient(#e0dff2,#1515a8,#00d4ff);
+    background-image: linear-gradient(to right, rgba(250, 248, 248, 0), rgb(147, 243, 44));
+    /* background-image: linear-gradient(#e0dff2,#1515a8,#00d4ff); */
 }
 
 .item:hover{
-    color: #3ab7f6;
-    opacity: 0.9;
-    transition: color opacity .5s;
+    color: #ffffff;
+    
+    transition: color  .5s;
 }
 
 .nav-items >ul>a{
@@ -53,12 +53,13 @@ body{
     padding: 5px;
     margin: 10px;
     font-size: 15px;
+    
 }
 
 .card:hover{
   
-    font-family: cursive;
-    opacity: 0.9;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    opacity: 0.95;
     transition: opacity .53s;
 }
 
@@ -72,8 +73,8 @@ body{
 .restaurant-list{
     display: flex;
     flex-wrap: wrap;
-    
-    
+   
+    /* align-content: flex-start; */
   
 }
 

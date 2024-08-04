@@ -4,7 +4,7 @@ import Footer from "./components/Footer";
 import React from "react";
 import { useState,useEffect } from "react";
 import Shimmer from "./components/Shimmer";
-
+import { Outlet } from "react-router-dom";
 
 
 
@@ -23,14 +23,14 @@ const Applayout=()=>{
       )
       const json=await data.json();
       
-      // console.log(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+      
       setAllRestaurants(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
   
     }
     return (allRestaurants.length===0) ? <Shimmer/> : (
         <>
           <Header/>
-          <Body/>
+          <Outlet/>
           <Footer/>
         </>
     )
