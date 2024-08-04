@@ -25,6 +25,7 @@ const Body =()=>{
   const [filterrestaurants,setfilterRestaurants]=useState([]);
  const [text,settext]=useState(0);
  const [allRestaurants,setAllRestaurants]=useState([]);
+
     useEffect(()=>{
       getRestaurants();
     },[])
@@ -43,15 +44,19 @@ const Body =()=>{
     
     // console.log(allRestaurants.length)
     // 
+     
     return (allRestaurants.length===0) ? <ShimmerBody/> : (
       <>
         <div className="search" >
          <input type="text" placeholder="search" value={searchText} onChange={(e)=>{
-          setSearchText(e.target.value);
-          if(text==0)
-          {
-            setAllRestaurants(allRestaurants)
-            settext(1)
+           setSearchText(e.target.value);
+           
+           if(text==0)
+            {
+              setAllRestaurants(allRestaurants)
+              // settext(1)
+              
+
           }
          }}/>
         </div>
