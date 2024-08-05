@@ -57,17 +57,16 @@ body{
 }
 
 .card:hover{
-  
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-image: linear-gradient(to left,#f1f1f1,#938c8c);
     opacity: 0.95;
     transition: opacity .53s;
+    cursor:default;
 }
 
 .card >img{
     width: 200px;
     height: 200px;
     
-    /* padding: 10px; */
 }
 
 .restaurant-list{
