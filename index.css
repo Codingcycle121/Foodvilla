@@ -49,11 +49,11 @@ body{
 .card{
     display: flex;
     width: 220px;
-    height: auto;
+    height: 95%;
     padding: 5px;
     margin: 10px;
     font-size: 15px;
-    
+    color: black;
 }
 
 .card:hover{
@@ -72,11 +72,14 @@ body{
 .restaurant-list{
     display: flex;
     flex-wrap: wrap;
-   
+    
     /* align-content: flex-start; */
   
 }
 
+.newlist{
+    text-decoration: none;
+}
 .footer{
     display: flex;
     /* margin: 10px; */
@@ -140,3 +143,10 @@ body{
     padding-top: 12%;
 }
 
+.menu{
+    display: flex
+}
+.menu>img{
+    width: 200px;
+    height: 200px;
+}

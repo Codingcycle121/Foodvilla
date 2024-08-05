@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react"
 import { json, useParams } from "react-router-dom";
 import { IMG_CDN } from "../../Constants";
+import Shimmer from "./Shimmer";
 const RestaurantMenu=()=>{
     const [restaurant,setRestaurant]=useState([]);
     const[restaurantName,setRestaurantName]=useState([]);
@@ -25,30 +26,34 @@ const RestaurantMenu=()=>{
           setRestaurant(jdata1)
           
        }
-       console.log(json);
+    //    console.log(json);
        
        setRestaurantName(json1)
     }
     
     
     
-    return(
+    return (!restaurant) ? <Shimmer/> :
+    (
         <>
+        <div className="menu">
+
+            <img src={IMG_CDN+restaurantName.cloudinaryImageId} />
+             
             <h1>Restaurant Name :{restaurantName.name}</h1>
             <h1>Restaurant Id : {id}</h1>
-            <img src={IMG_CDN+restaurantName.cloudinaryImageId} style={{
-        width:'200px',
-        height:'200px'
-       }}/>
+             
             <h1>Restaurant Menu:</h1> 
+             
             <ul>
             {
                   restaurant.map((item)=>{
                  
-                  return <li>{item.card.info.name} </li> 
+                  return <li key={item.card.info.id}>{item.card.info.name} </li> 
                 })
                 }
                 </ul>
+        </div>
         </>
     )
 }
