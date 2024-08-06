@@ -55,7 +55,7 @@ const RestaurantMenu=()=>{
                {
                   restaurant.map((item)=>{
                  
-                  return <li key={item.card.info.id}>{item.card.info.name} </li> 
+                  return <li key={item?.card?.info?.id}>{item?.card?.info?.name} </li> 
                 })
                 }
                 </ul></td>
