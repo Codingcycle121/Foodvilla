@@ -27,7 +27,7 @@ const Applayout=()=>{
       setAllRestaurants(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
   
     }
-    return (allRestaurants.length===0) ? <Shimmer/> : (
+    return (allRestaurants?.length===0) ? <Shimmer/> : (
         <>
           <Header/>
           <Outlet/>

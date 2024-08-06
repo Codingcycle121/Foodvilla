@@ -65,7 +65,6 @@ const Body =()=>{
         <div className="restaurant-list">
         {
           filterrestaurants.map((resturant)=>{
-            console.log(resturant.info.id)
               return <Link to={'/restaurant/'+resturant.info.id} key={resturant.info.id} className="newlist"><RestaurantCard {...resturant?.info } /></Link>
             
           }
