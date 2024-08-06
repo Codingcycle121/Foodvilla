@@ -33,12 +33,36 @@ const RestaurantMenu=()=>{
     
     
     
-    return (!restaurant) ? <Shimmer/> :
-    (
+    return (
         <>
         <div className="menu">
 
-            <img src={IMG_CDN+restaurantName.cloudinaryImageId} />
+           <table className="table">
+            
+           <tr className="menuheading1"><th className="menuheading">MENU</th></tr>
+            <tr className="tableheading">
+            <th className="tablehead">Restaurant Logo </th>
+            <th className="tablehead">Restaurant Name </th>
+            <th className="tablehead">Restaurant Id </th>
+            <th className="tablehead">Restaurant Menu </th>
+            </tr>
+            
+        <tr className="tabledata">
+                <td className="tabledatas"><img className="imgmenu" src={IMG_CDN+restaurantName.cloudinaryImageId} /></td>
+                <td className="tabledatas">{restaurantName.name}</td>
+                <td className="tabledatas">{id}</td>
+                <td className="tabledatas" ><ul>
+               {
+                  restaurant.map((item)=>{
+                 
+                  return <li key={item.card.info.id}>{item.card.info.name} </li> 
+                })
+                }
+                </ul></td>
+        </tr>
+            
+
+            {/* <img src={IMG_CDN+restaurantName.cloudinaryImageId} />
              
             <h1>Restaurant Name :{restaurantName.name}</h1>
             <h1>Restaurant Id : {id}</h1>
@@ -52,7 +76,8 @@ const RestaurantMenu=()=>{
                   return <li key={item.card.info.id}>{item.card.info.name} </li> 
                 })
                 }
-                </ul>
+                </ul> */}
+           </table>
         </div>
         </>
     )

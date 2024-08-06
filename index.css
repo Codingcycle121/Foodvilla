@@ -16,7 +16,7 @@ background-image: linear-gradient(to right, #fdbb2d,#22c1c3);
 } */
 
 body{
-    background-image: linear-gradient(to right, rgba(250, 248, 248, 0), rgb(147, 243, 44));
+    background-image: linear-gradient(to right, rgba(250, 248, 248, 0), rgb(100, 243, 44));
     /* background-image: linear-gradient(#e0dff2,#1515a8,#00d4ff); */
 }
 
@@ -54,6 +54,7 @@ body{
     margin: 10px;
     font-size: 15px;
     color: black;
+
 }
 
 .card:hover{
@@ -79,6 +80,8 @@ body{
 
 .newlist{
     text-decoration: none;
+    display: flex;
+    cursor: default;
 }
 .footer{
     display: flex;
@@ -144,9 +147,42 @@ body{
 }
 
 .menu{
-    display: flex
+    display: flex;
+    
 }
-.menu>img{
+.imgmenu{
     width: 200px;
     height: 200px;
+}
+
+.table{
+    margin: 5%;
+    
+}
+.tablehead{
+   padding-inline: 1%;
+   border: 1px solid black;
+}
+
+.tabledatas{
+    font-size: 100%;
+    padding-inline: 1%;
+    font-weight: 700;
+    border: 1px solid black;
+}
+
+.menu{
+    /* border:1px solid black; */
+}
+.tableheading{
+    font-size: 20px;
+}
+.menuheading{
+    
+   padding-inline: 45%;
+   font-size: xx-large;
+   
+}
+.menuheading1{
+    border: 1px solid black;
 }

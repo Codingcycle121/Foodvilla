@@ -39382,15 +39382,42 @@ var RestaurantMenu = function RestaurantMenu() {
     }));
     return _getRestaurantMenu.apply(this, arguments);
   }
-  return !restaurant ? /*#__PURE__*/_react.default.createElement(_Shimmer.default, null) : /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
     className: "menu"
+  }, /*#__PURE__*/_react.default.createElement("table", {
+    className: "table"
+  }, /*#__PURE__*/_react.default.createElement("tr", {
+    className: "menuheading1"
+  }, /*#__PURE__*/_react.default.createElement("th", {
+    className: "menuheading"
+  }, "MENU")), /*#__PURE__*/_react.default.createElement("tr", {
+    className: "tableheading"
+  }, /*#__PURE__*/_react.default.createElement("th", {
+    className: "tablehead"
+  }, "Restaurant Logo "), /*#__PURE__*/_react.default.createElement("th", {
+    className: "tablehead"
+  }, "Restaurant Name "), /*#__PURE__*/_react.default.createElement("th", {
+    className: "tablehead"
+  }, "Restaurant Id "), /*#__PURE__*/_react.default.createElement("th", {
+    className: "tablehead"
+  }, "Restaurant Menu ")), /*#__PURE__*/_react.default.createElement("tr", {
+    className: "tabledata"
+  }, /*#__PURE__*/_react.default.createElement("td", {
+    className: "tabledatas"
   }, /*#__PURE__*/_react.default.createElement("img", {
+    className: "imgmenu",
     src: _Constants.IMG_CDN + restaurantName.cloudinaryImageId
-  }), /*#__PURE__*/_react.default.createElement("h1", null, "Restaurant Name :", restaurantName.name), /*#__PURE__*/_react.default.createElement("h1", null, "Restaurant Id : ", id), /*#__PURE__*/_react.default.createElement("h1", null, "Restaurant Menu:"), /*#__PURE__*/_react.default.createElement("ul", null, restaurant.map(function (item) {
+  })), /*#__PURE__*/_react.default.createElement("td", {
+    className: "tabledatas"
+  }, restaurantName.name), /*#__PURE__*/_react.default.createElement("td", {
+    className: "tabledatas"
+  }, id), /*#__PURE__*/_react.default.createElement("td", {
+    className: "tabledatas"
+  }, /*#__PURE__*/_react.default.createElement("ul", null, restaurant.map(function (item) {
     return /*#__PURE__*/_react.default.createElement("li", {
       key: item.card.info.id
     }, item.card.info.name, " ");
-  }))));
+  })))))));
 };
 var _default = exports.default = RestaurantMenu;
 },{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/dist/index.js","../../Constants":"Constants.js","./Shimmer":"src/components/Shimmer.js"}],"App.js":[function(require,module,exports) {
@@ -39457,7 +39484,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61693" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65474" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
