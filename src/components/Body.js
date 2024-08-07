@@ -15,6 +15,7 @@ const filterData=(searchText,restaurants)=>{
     return restaurants;
  
 }
+
 let len=0;
 const Body =()=>{
   const [searchText,setSearchText]=useState();
@@ -22,11 +23,13 @@ const Body =()=>{
  const [text,settext]=useState(0);
  const [allRestaurants,setAllRestaurants]=useState([]);
 
+
+ 
     useEffect(()=>{
       getRestaurants();
     },[])
   
-    async function getRestaurants()
+   async function getRestaurants()
     {
       const data =await fetch(
         "https://www.swiggy.com/dapi/restaurants/list/v5?lat=22.71700&lng=75.83370&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
@@ -37,6 +40,7 @@ const Body =()=>{
       setAllRestaurants(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
     }
    
+  
    
   
     return (allRestaurants.length===0) ? <ShimmerBody/> : (

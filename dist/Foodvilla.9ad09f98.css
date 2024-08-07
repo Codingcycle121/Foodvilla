@@ -16,7 +16,7 @@ background-image: linear-gradient(to right, #fdbb2d,#22c1c3);
 } */
 
 body{
-    background-image: linear-gradient(to right, rgba(250, 248, 248, 0), rgb(100, 243, 44));
+    background-image: linear-gradient(to right, rgba(250, 248, 248, 0), rgb(44, 243, 77));
     /* background-image: linear-gradient(#e0dff2,#1515a8,#00d4ff); */
 }
 
@@ -169,11 +169,10 @@ body{
     padding-inline: 1%;
     font-weight: 700;
     border: 1px solid black;
+    background-image: linear-gradient(to right #fff,#cbb953);
 }
 
-.menu{
-    /* border:1px solid black; */
-}
+
 .tableheading{
     font-size: 20px;
 }
