@@ -53,7 +53,7 @@ const RestaurantMenu=()=>{
                 <td className="tabledatas">{id}</td>
                 <td className="tabledatas" ><ul>
                {
-                  restaurant.map((item)=>{
+                  restaurant?.map((item)=>{
                  
                   return <li key={item?.card?.info?.id}>{item?.card?.info?.name} </li> 
                 })

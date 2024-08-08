@@ -7,8 +7,7 @@ import { Link } from "react-router-dom";
 const filterData=(searchText,restaurants)=>{
   
   if(searchText!==""){
-    let filter=restaurants.filter((resturant)=> resturant?.info?.name?.toLowerCase()?.includes(searchText?.toLowerCase().trim()),
-  )
+    let filter=restaurants?.filter((resturant)=> resturant?.info?.name?.toLowerCase()?.includes(searchText?.toLowerCase().trim()))
     return filter;
   }
 
@@ -43,7 +42,7 @@ const Body =()=>{
   
    
   
-    return (allRestaurants.length===0) ? <ShimmerBody/> : (
+    return (allRestaurants?.length===0) ? <ShimmerBody/> : (
       <>
         <div className="search" >
          <input type="text" placeholder="search" value={searchText} onChange={(e)=>{
@@ -68,8 +67,8 @@ const Body =()=>{
         </div>
         <div className="restaurant-list">
         {
-          filterrestaurants.map((resturant)=>{
-              return <Link to={'/restaurant/'+resturant.info.id} key={resturant.info.id} className="newlist"><RestaurantCard {...resturant?.info } /></Link>
+          filterrestaurants?.map((resturant)=>{
+              return <Link to={'/restaurant/'+resturant.info.id} key={resturant?.info?.id} className="newlist"><RestaurantCard {...resturant?.info } /></Link>
             
           }
         )

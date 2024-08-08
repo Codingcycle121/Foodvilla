@@ -2,15 +2,21 @@ import { useEffect, useState } from "react"
 
 const useOnline=()=>{
     const [isOnline,setisOnline]=useState(true);
-    useEffect(
-        
+    useEffect( 
         ()=>{
-         window.addEventListener("online",()=>{
-            setisOnline(true)
-         });
-         window.addEventListener("offline",()=>{
-            setisOnline(false)
-         });
+            const handleOnline=()=>{
+                setisOnline(true)
+            }
+            const handleOffline=()=>{
+                setisOnline(false)
+            }
+         window.addEventListener("online",handleOnline);
+         window.addEventListener("offline",handleOffline);
+
+         return ()=>{
+          window.removeEventListener('online',handleOnline);
+          window.removeEventListener('offline',handleOffline)
+         }
         },[]
     )
     return isOnline;

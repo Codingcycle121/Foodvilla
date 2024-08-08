@@ -186,5 +186,27 @@ body{
     border: 1px solid black;
 }
 
+@media(max-width:1018px){
+   .tabledata{
+     box-sizing: border-box;
+     text-wrap: wrap;
+     min-width: 617px;
+   }
+   .menu{
+    font-size: .81em;
+   }
+   body{
+    background-image: linear-gradient(to right, rgba(250, 248, 248, 0), rgb(44, 243, 77));
+    /* background-image: linear-gradient(#e0dff2,#1515a8,#00d4ff); */
+}
+   
+   .header{
+     box-sizing: border-box;
+     
+   }
+   html{
+    min-width: 619px;
+   }
+}
 
 /*# sourceMappingURL=/Foodvilla.9ad09f98.css.map */
