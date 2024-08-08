@@ -38457,90 +38457,7 @@ var Footer = function Footer() {
   }, "Contact Us"), " "), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("div", null, "Help & Support")), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("div", null, "Partern with us")), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("div", null, "Ride with us"))))));
 };
 var _default = exports.default = Footer;
-},{"react":"node_modules/react/index.js"}],"src/components/ProfileClass.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _react = _interopRequireWildcard(require("react"));
-function _getRequireWildcardCache(e) { if ("function" != typeof WeakMap) return null; var r = new WeakMap(), t = new WeakMap(); return (_getRequireWildcardCache = function (e) { return e ? t : r; })(e); }
-function _interopRequireWildcard(e, r) { if (!r && e && e.__esModule) return e; if (null === e || "object" != typeof e && "function" != typeof e) return { default: e }; var t = _getRequireWildcardCache(r); if (t && t.has(e)) return t.get(e); var n = { __proto__: null }, a = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var u in e) if ("default" !== u && {}.hasOwnProperty.call(e, u)) { var i = a ? Object.getOwnPropertyDescriptor(e, u) : null; i && (i.get || i.set) ? Object.defineProperty(n, u, i) : n[u] = e[u]; } return n.default = e, t && t.set(e, n), n; }
-function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
-function _classCallCheck(a, n) { if (!(a instanceof n)) throw new TypeError("Cannot call a class as a function"); }
-function _defineProperties(e, r) { for (var t = 0; t < r.length; t++) { var o = r[t]; o.enumerable = o.enumerable || !1, o.configurable = !0, "value" in o && (o.writable = !0), Object.defineProperty(e, _toPropertyKey(o.key), o); } }
-function _createClass(e, r, t) { return r && _defineProperties(e.prototype, r), t && _defineProperties(e, t), Object.defineProperty(e, "prototype", { writable: !1 }), e; }
-function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
-function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
-function _callSuper(t, o, e) { return o = _getPrototypeOf(o), _possibleConstructorReturn(t, _isNativeReflectConstruct() ? Reflect.construct(o, e || [], _getPrototypeOf(t).constructor) : o.apply(t, e)); }
-function _possibleConstructorReturn(t, e) { if (e && ("object" == _typeof(e) || "function" == typeof e)) return e; if (void 0 !== e) throw new TypeError("Derived constructors may only return object or undefined"); return _assertThisInitialized(t); }
-function _assertThisInitialized(e) { if (void 0 === e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); return e; }
-function _isNativeReflectConstruct() { try { var t = !Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); } catch (t) {} return (_isNativeReflectConstruct = function _isNativeReflectConstruct() { return !!t; })(); }
-function _getPrototypeOf(t) { return _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function (t) { return t.__proto__ || Object.getPrototypeOf(t); }, _getPrototypeOf(t); }
-function _inherits(t, e) { if ("function" != typeof e && null !== e) throw new TypeError("Super expression must either be null or a function"); t.prototype = Object.create(e && e.prototype, { constructor: { value: t, writable: !0, configurable: !0 } }), Object.defineProperty(t, "prototype", { writable: !1 }), e && _setPrototypeOf(t, e); }
-function _setPrototypeOf(t, e) { return _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function (t, e) { return t.__proto__ = e, t; }, _setPrototypeOf(t, e); }
-var Profile = /*#__PURE__*/function (_Component) {
-  function Profile(props) {
-    var _this;
-    _classCallCheck(this, Profile);
-    _this = _callSuper(this, Profile, [props]);
-    console.log("constructor called" + _this.props.heading);
-    _this.state = {
-      count: 0
-    };
-    return _this;
-  }
-  _inherits(Profile, _Component);
-  return _createClass(Profile, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      console.log("component did mount");
-    }
-  }, {
-    key: "componentDidUpdate",
-    value: function componentDidUpdate() {
-      console.log('component did update');
-    }
-  }, {
-    key: "componentWillUnmount",
-    value: function componentWillUnmount() {
-      console.log('component will unmount');
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      var _this2 = this;
-      return /*#__PURE__*/_react.default.createElement("div", null, console.log("render") + this.props.heading, /*#__PURE__*/_react.default.createElement("h1", null, "Profile class Component"), /*#__PURE__*/_react.default.createElement("h2", null, "jai shree ram"), /*#__PURE__*/_react.default.createElement("h2", null, "Name: ", this.props.name), /*#__PURE__*/_react.default.createElement("h2", null, "XYZ ", this.props.xyz, " "), /*#__PURE__*/_react.default.createElement("h2", null, "Count: ", this.state.count, " "), /*#__PURE__*/_react.default.createElement("button", {
-        onClick: function onClick(len) {
-          _this2.setState({
-            count: 1
-          });
-        }
-      }, "change"));
-    }
-  }]);
-}(_react.Component);
-var _default = exports.default = Profile;
-},{"react":"node_modules/react/index.js"}],"src/components/About.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _react = _interopRequireDefault(require("react"));
-var _Header = _interopRequireDefault(require("./Header"));
-var _Footer = _interopRequireDefault(require("./Footer"));
-var _ProfileClass = _interopRequireDefault(require("./ProfileClass"));
-function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
-// import { Outlet } from "react-router-dom";
-
-var About = function About() {
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("h1", null, "Hey! this is about"));
-};
-var _default = exports.default = About;
-},{"react":"node_modules/react/index.js","./Header":"src/components/Header.js","./Footer":"src/components/Footer.js","./ProfileClass":"src/components/ProfileClass.js"}],"node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js"}],"node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 function getBundleURLCached() {
   if (!bundleURL) {
@@ -39538,14 +39455,144 @@ var RestaurantMenu = function RestaurantMenu() {
   })))))));
 };
 var _default = exports.default = RestaurantMenu;
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/dist/index.js","../../Constants":"Constants.js"}],"App.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/dist/index.js","../../Constants":"Constants.js"}],"src/components/ProfileClass.js":[function(require,module,exports) {
 "use strict";
 
-var _react = _interopRequireDefault(require("react"));
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _react = _interopRequireWildcard(require("react"));
+function _getRequireWildcardCache(e) { if ("function" != typeof WeakMap) return null; var r = new WeakMap(), t = new WeakMap(); return (_getRequireWildcardCache = function (e) { return e ? t : r; })(e); }
+function _interopRequireWildcard(e, r) { if (!r && e && e.__esModule) return e; if (null === e || "object" != typeof e && "function" != typeof e) return { default: e }; var t = _getRequireWildcardCache(r); if (t && t.has(e)) return t.get(e); var n = { __proto__: null }, a = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var u in e) if ("default" !== u && {}.hasOwnProperty.call(e, u)) { var i = a ? Object.getOwnPropertyDescriptor(e, u) : null; i && (i.get || i.set) ? Object.defineProperty(n, u, i) : n[u] = e[u]; } return n.default = e, t && t.set(e, n), n; }
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+function _classCallCheck(a, n) { if (!(a instanceof n)) throw new TypeError("Cannot call a class as a function"); }
+function _defineProperties(e, r) { for (var t = 0; t < r.length; t++) { var o = r[t]; o.enumerable = o.enumerable || !1, o.configurable = !0, "value" in o && (o.writable = !0), Object.defineProperty(e, _toPropertyKey(o.key), o); } }
+function _createClass(e, r, t) { return r && _defineProperties(e.prototype, r), t && _defineProperties(e, t), Object.defineProperty(e, "prototype", { writable: !1 }), e; }
+function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
+function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+function _callSuper(t, o, e) { return o = _getPrototypeOf(o), _possibleConstructorReturn(t, _isNativeReflectConstruct() ? Reflect.construct(o, e || [], _getPrototypeOf(t).constructor) : o.apply(t, e)); }
+function _possibleConstructorReturn(t, e) { if (e && ("object" == _typeof(e) || "function" == typeof e)) return e; if (void 0 !== e) throw new TypeError("Derived constructors may only return object or undefined"); return _assertThisInitialized(t); }
+function _assertThisInitialized(e) { if (void 0 === e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); return e; }
+function _isNativeReflectConstruct() { try { var t = !Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); } catch (t) {} return (_isNativeReflectConstruct = function _isNativeReflectConstruct() { return !!t; })(); }
+function _getPrototypeOf(t) { return _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function (t) { return t.__proto__ || Object.getPrototypeOf(t); }, _getPrototypeOf(t); }
+function _inherits(t, e) { if ("function" != typeof e && null !== e) throw new TypeError("Super expression must either be null or a function"); t.prototype = Object.create(e && e.prototype, { constructor: { value: t, writable: !0, configurable: !0 } }), Object.defineProperty(t, "prototype", { writable: !1 }), e && _setPrototypeOf(t, e); }
+function _setPrototypeOf(t, e) { return _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function (t, e) { return t.__proto__ = e, t; }, _setPrototypeOf(t, e); }
+var Profile = /*#__PURE__*/function (_Component) {
+  function Profile(props) {
+    var _this;
+    _classCallCheck(this, Profile);
+    _this = _callSuper(this, Profile, [props]);
+    console.log("constructor called" + _this.props.heading);
+    _this.state = {
+      count: 0
+    };
+    return _this;
+  }
+  _inherits(Profile, _Component);
+  return _createClass(Profile, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      console.log("component did mount");
+    }
+  }, {
+    key: "componentDidUpdate",
+    value: function componentDidUpdate() {
+      console.log('component did update');
+    }
+  }, {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      console.log('component will unmount');
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+      return /*#__PURE__*/_react.default.createElement("div", null, console.log("render") + this.props.heading, /*#__PURE__*/_react.default.createElement("h1", null, "Profile class Component"), /*#__PURE__*/_react.default.createElement("h2", null, "jai shree ram"), /*#__PURE__*/_react.default.createElement("h2", null, "Name: ", this.props.name), /*#__PURE__*/_react.default.createElement("h2", null, "XYZ ", this.props.xyz, " "), /*#__PURE__*/_react.default.createElement("h2", null, "Count: ", this.state.count, " "), /*#__PURE__*/_react.default.createElement("button", {
+        onClick: function onClick(len) {
+          _this2.setState({
+            count: 1
+          });
+        }
+      }, "change"));
+    }
+  }]);
+}(_react.Component);
+var _default = exports.default = Profile;
+},{"react":"node_modules/react/index.js"}],"node_modules/parcel-bundler/src/builtins/bundle-loader.js":[function(require,module,exports) {
+var getBundleURL = require('./bundle-url').getBundleURL;
+function loadBundlesLazy(bundles) {
+  if (!Array.isArray(bundles)) {
+    bundles = [bundles];
+  }
+  var id = bundles[bundles.length - 1];
+  try {
+    return Promise.resolve(require(id));
+  } catch (err) {
+    if (err.code === 'MODULE_NOT_FOUND') {
+      return new LazyPromise(function (resolve, reject) {
+        loadBundles(bundles.slice(0, -1)).then(function () {
+          return require(id);
+        }).then(resolve, reject);
+      });
+    }
+    throw err;
+  }
+}
+function loadBundles(bundles) {
+  return Promise.all(bundles.map(loadBundle));
+}
+var bundleLoaders = {};
+function registerBundleLoader(type, loader) {
+  bundleLoaders[type] = loader;
+}
+module.exports = exports = loadBundlesLazy;
+exports.load = loadBundles;
+exports.register = registerBundleLoader;
+var bundles = {};
+function loadBundle(bundle) {
+  var id;
+  if (Array.isArray(bundle)) {
+    id = bundle[1];
+    bundle = bundle[0];
+  }
+  if (bundles[bundle]) {
+    return bundles[bundle];
+  }
+  var type = (bundle.substring(bundle.lastIndexOf('.') + 1, bundle.length) || bundle).toLowerCase();
+  var bundleLoader = bundleLoaders[type];
+  if (bundleLoader) {
+    return bundles[bundle] = bundleLoader(getBundleURL() + bundle).then(function (resolved) {
+      if (resolved) {
+        module.bundle.register(id, resolved);
+      }
+      return resolved;
+    }).catch(function (e) {
+      delete bundles[bundle];
+      throw e;
+    });
+  }
+}
+function LazyPromise(executor) {
+  this.executor = executor;
+  this.promise = null;
+}
+LazyPromise.prototype.then = function (onSuccess, onError) {
+  if (this.promise === null) this.promise = new Promise(this.executor);
+  return this.promise.then(onSuccess, onError);
+};
+LazyPromise.prototype.catch = function (onError) {
+  if (this.promise === null) this.promise = new Promise(this.executor);
+  return this.promise.catch(onError);
+};
+},{"./bundle-url":"node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"App.js":[function(require,module,exports) {
+"use strict";
+
+var _react = _interopRequireWildcard(require("react"));
 var _client = _interopRequireDefault(require("react-dom/client"));
 var _reactRouterDom = require("react-router-dom");
 var _Error = _interopRequireDefault(require("./src/components/Error"));
-var _About = _interopRequireDefault(require("./src/components/About"));
 var _Applayout = _interopRequireDefault(require("./src/Applayout.js"));
 var _Contact = _interopRequireDefault(require("./src/components/Contact.js"));
 var _Cart = _interopRequireDefault(require("./src/components/Cart.js"));
@@ -39553,13 +39600,20 @@ var _Body = _interopRequireDefault(require("./src/components/Body.js"));
 var _RestaurnatMenu = _interopRequireDefault(require("./src/components/RestaurnatMenu.js"));
 var _ProfileClass = _interopRequireDefault(require("./src/components/ProfileClass.js"));
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
+function _getRequireWildcardCache(e) { if ("function" != typeof WeakMap) return null; var r = new WeakMap(), t = new WeakMap(); return (_getRequireWildcardCache = function (e) { return e ? t : r; })(e); }
+function _interopRequireWildcard(e, r) { if (!r && e && e.__esModule) return e; if (null === e || "object" != typeof e && "function" != typeof e) return { default: e }; var t = _getRequireWildcardCache(r); if (t && t.has(e)) return t.get(e); var n = { __proto__: null }, a = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var u in e) if ("default" !== u && {}.hasOwnProperty.call(e, u)) { var i = a ? Object.getOwnPropertyDescriptor(e, u) : null; i && (i.get || i.set) ? Object.defineProperty(n, u, i) : n[u] = e[u]; } return n.default = e, t && t.set(e, n), n; }
+var About = (0, _react.lazy)(function () {
+  return require("_bundle_loader")(require.resolve("./src/components/About"));
+});
 var appRouter = (0, _reactRouterDom.createBrowserRouter)([{
   path: '/',
   element: /*#__PURE__*/_react.default.createElement(_Applayout.default, null),
   errorElement: /*#__PURE__*/_react.default.createElement(_Error.default, null),
   children: [{
     path: '/about',
-    element: /*#__PURE__*/_react.default.createElement(_About.default, null),
+    element: /*#__PURE__*/_react.default.createElement(_react.Suspense, {
+      fallback: /*#__PURE__*/_react.default.createElement("h1", null, "loading...")
+    }, /*#__PURE__*/_react.default.createElement(About, null)),
     children: [{
       path: 'profile',
       element: /*#__PURE__*/_react.default.createElement(_ProfileClass.default, null)
@@ -39582,7 +39636,7 @@ var root = _client.default.createRoot(document.getElementById("root"));
 root.render( /*#__PURE__*/_react.default.createElement(_reactRouterDom.RouterProvider, {
   router: appRouter
 }));
-},{"react":"node_modules/react/index.js","react-dom/client":"node_modules/react-dom/client.js","react-router-dom":"node_modules/react-router-dom/dist/index.js","./src/components/Error":"src/components/Error.js","./src/components/About":"src/components/About.js","./src/Applayout.js":"src/Applayout.js","./src/components/Contact.js":"src/components/Contact.js","./src/components/Cart.js":"src/components/Cart.js","./src/components/Body.js":"src/components/Body.js","./src/components/RestaurnatMenu.js":"src/components/RestaurnatMenu.js","./src/components/ProfileClass.js":"src/components/ProfileClass.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-dom/client":"node_modules/react-dom/client.js","react-router-dom":"node_modules/react-router-dom/dist/index.js","./src/components/Error":"src/components/Error.js","./src/Applayout.js":"src/Applayout.js","./src/components/Contact.js":"src/components/Contact.js","./src/components/Cart.js":"src/components/Cart.js","./src/components/Body.js":"src/components/Body.js","./src/components/RestaurnatMenu.js":"src/components/RestaurnatMenu.js","./src/components/ProfileClass.js":"src/components/ProfileClass.js","_bundle_loader":"node_modules/parcel-bundler/src/builtins/bundle-loader.js","./src/components/About":[["About.460069cf.js","src/components/About.js"],"About.460069cf.js.map","src/components/About.js"]}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -39607,7 +39661,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53460" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59936" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
@@ -39751,5 +39805,26 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["node_modules/parcel-bundler/src/builtins/hmr-runtime.js","App.js"], null)
+},{}],"node_modules/parcel-bundler/src/builtins/loaders/browser/js-loader.js":[function(require,module,exports) {
+module.exports = function loadJSBundle(bundle) {
+  return new Promise(function (resolve, reject) {
+    var script = document.createElement('script');
+    script.async = true;
+    script.type = 'text/javascript';
+    script.charset = 'utf-8';
+    script.src = bundle;
+    script.onerror = function (e) {
+      script.onerror = script.onload = null;
+      reject(e);
+    };
+    script.onload = function () {
+      script.onerror = script.onload = null;
+      resolve();
+    };
+    document.getElementsByTagName('head')[0].appendChild(script);
+  });
+};
+},{}],0:[function(require,module,exports) {
+var b=require("node_modules/parcel-bundler/src/builtins/bundle-loader.js");b.register("js",require("node_modules/parcel-bundler/src/builtins/loaders/browser/js-loader.js"));
+},{}]},{},["node_modules/parcel-bundler/src/builtins/hmr-runtime.js",0,"App.js"], null)
 //# sourceMappingURL=/App.d36a57b6.js.map
