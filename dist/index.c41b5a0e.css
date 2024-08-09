@@ -1,0 +1,48 @@
+.shimmercard {
+  background-color: #838b9379;
+  border: 1px solid #000;
+  width: 220px;
+  height: 331.6px;
+  margin: 10px;
+  padding: 5px;
+  font-size: 15px;
+  display: flex;
+}
+
+.shimmer-search {
+  color: #838b9379;
+  margin: .5rem;
+}
+
+.shimmer-search1 {
+  background-color: #838b9379;
+  border: 1px solid #000;
+  margin: .5rem 87% .5rem .5rem;
+  padding: 14px;
+}
+
+.shimmer-search-btn {
+  padding-top: 35.2px;
+  background-color: #838b9379;
+  justify-content: center;
+  margin: .5rem;
+  padding-inline: 54.2px;
+}
+
+.shimmer-header {
+  background-color: #838b9379;
+  border: 1px solid #000;
+  justify-content: space-between;
+  margin: 10px;
+  padding-top: 90px;
+  display: flex;
+}
+
+.shimmer-footer {
+  background-color: #838b9379;
+  border: 1px solid #000;
+  margin: 10px;
+  padding-top: 20%;
+  display: flex;
+}
+/*# sourceMappingURL=index.c41b5a0e.css.map */

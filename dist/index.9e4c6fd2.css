@@ -1,0 +1,199 @@
+.header {
+  border: 1px solid #000;
+  justify-content: space-between;
+  margin: 10px;
+  display: flex;
+}
+
+.nav-items > ul {
+  margin-right: 10px;
+  list-style: none;
+  display: flex;
+}
+
+body {
+  background-image: linear-gradient(to right, #faf8f800, #2cf34d);
+}
+
+.item:hover {
+  color: #fff;
+  transition: color .5s;
+}
+
+.nav-items > ul > a {
+  color: #000;
+  cursor: default;
+  margin-top: 20px;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.nav-items > ul > li {
+  padding: 10px;
+}
+
+.logo, .footer-logo {
+  width: 90px;
+}
+
+.card {
+  color: #000;
+  width: 220px;
+  height: 95%;
+  margin: 10px;
+  padding: 5px;
+  font-size: 15px;
+  display: flex;
+}
+
+.card:hover {
+  opacity: .95;
+  cursor: default;
+  background-image: linear-gradient(to left, #f1f1f1, #938c8c);
+  transition: opacity .53s;
+}
+
+.card > img {
+  width: 200px;
+  height: 200px;
+}
+
+.restaurant-list {
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.newlist {
+  cursor: default;
+  text-decoration: none;
+  display: flex;
+}
+
+.footer {
+  color: #383636af;
+  margin-top: 5%;
+  margin-inline: 10px;
+  justify-content: center;
+  margin-left: 20%;
+  font-size: 2.5em;
+  font-weight: bolder;
+  display: flex;
+}
+
+.footer-img {
+  flex-wrap: wrap;
+  width: 30%;
+  display: flex;
+}
+
+.footerimage {
+  min-width: 30%;
+  max-width: 70%;
+}
+
+.footer2 {
+  color: #fff;
+  opacity: .9;
+  background-color: #000;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-top: 5%;
+  padding-bottom: 10%;
+  padding-right: 5%;
+  display: flex;
+}
+
+.companylogo {
+  letter-spacing: -.5px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 30px;
+}
+
+.company-1 {
+  line-height: 30px;
+  list-style: none;
+}
+
+.search, .search-btn {
+  margin: .5rem;
+}
+
+.search-btn {
+  padding: 5px;
+  background-color: #2fb42f;
+  justify-content: center;
+  padding-inline: 30px;
+}
+
+.error {
+  text-align: center;
+  padding-top: 12%;
+  font-size: 100px;
+}
+
+.menu {
+  display: flex;
+}
+
+.imgmenu {
+  width: 200px;
+  height: 200px;
+}
+
+.table {
+  margin: 5%;
+}
+
+.tablehead {
+  border: 1px solid #000;
+  padding-inline: 1%;
+}
+
+.tabledatas {
+  background-image: linear-gradient(to right #fff, #cbb953);
+  border: 1px solid #000;
+  padding-inline: 1%;
+  font-size: 100%;
+  font-weight: 700;
+}
+
+.tableheading {
+  font-size: 20px;
+}
+
+.menuheading {
+  padding-inline: 45%;
+  font-size: xx-large;
+}
+
+.menuheading1 {
+  border: 1px solid #000;
+}
+
+@media (width <= 1018px) {
+  .tabledata {
+    box-sizing: border-box;
+    text-wrap: wrap;
+    min-width: 617px;
+  }
+
+  .menu {
+    font-size: .81em;
+  }
+
+  body {
+    background-image: linear-gradient(to right, #faf8f800, #2cf34d);
+  }
+
+  .header {
+    box-sizing: border-box;
+  }
+
+  html {
+    min-width: 720px;
+    max-width: max-content;
+    margin: 0;
+  }
+}
+/*# sourceMappingURL=index.9e4c6fd2.css.map */
