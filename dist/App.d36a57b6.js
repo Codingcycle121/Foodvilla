@@ -38426,7 +38426,9 @@ function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e
 var Footer = function Footer() {
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
     className: "footer"
-  }, /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("p", null, "For better experience,download Foodvilla app now")), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("img", {
+  }, /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("p", null, "For better experience,download Foodvilla app now")), /*#__PURE__*/_react.default.createElement("div", {
+    className: "footerimage"
+  }, /*#__PURE__*/_react.default.createElement("img", {
     src: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/portal/m/play_store.png",
     alt: "google-play",
     className: "footer-img"
@@ -38576,8 +38578,8 @@ var useOnline = function useOnline() {
     window.addEventListener("online", handleOnline);
     window.addEventListener("offline", handleOffline);
     return function () {
-      window.removeEventListener('online', handleOnline);
-      window.removeEventListener('offline', handleOffline);
+      window.removeEventListener("online", handleOnline);
+      window.removeEventListener("offline", handleOffline);
     };
   }, []);
   return isOnline;
@@ -38620,7 +38622,10 @@ var useRestaurant = function useRestaurant() {
         while (1) switch (_context.prev = _context.next) {
           case 0:
             _context.next = 2;
-            return fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=22.71700&lng=75.83370&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+            return fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=22.71700&lng=75.83370&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING", {
+              method: 'GET',
+              mode: 'cors'
+            });
           case 2:
             data = _context.sent;
             _context.next = 5;
@@ -38638,7 +38643,13 @@ var useRestaurant = function useRestaurant() {
   }
   return allRestaurants;
 };
-var _default = exports.default = useRestaurant;
+var _default = exports.default = useRestaurant; // await axios.get('https://api.example.com/data', {
+//   headers: {
+//     'Content-Type': 'application/json',
+//     'Authorization': `Bearer ${token}`
+//   },
+//   withCredentials: true // This is important for CORS
+// });
 },{"react":"node_modules/react/index.js"}],"src/Applayout.js":[function(require,module,exports) {
 "use strict";
 
@@ -38671,15 +38682,13 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = Contact;
 var _react = _interopRequireDefault(require("react"));
-var _Header = _interopRequireDefault(require("./Header"));
-var _Footer = _interopRequireDefault(require("./Footer"));
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
 function Contact() {
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
     className: "contact"
   }, /*#__PURE__*/_react.default.createElement("h1", null, "This is contact")));
 }
-},{"react":"node_modules/react/index.js","./Header":"src/components/Header.js","./Footer":"src/components/Footer.js"}],"src/components/Cart.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js"}],"src/components/Cart.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -38687,8 +38696,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 var _react = _interopRequireDefault(require("react"));
-var _Header = _interopRequireDefault(require("./Header"));
-var _Footer = _interopRequireDefault(require("./Footer"));
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
 var Cart = function Cart() {
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
@@ -38696,7 +38703,7 @@ var Cart = function Cart() {
   }, /*#__PURE__*/_react.default.createElement("h1", null, "Your cart is empty!")));
 };
 var _default = exports.default = Cart;
-},{"react":"node_modules/react/index.js","./Header":"src/components/Header.js","./Footer":"src/components/Footer.js"}],"Constants.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js"}],"Constants.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -38822,358 +38829,358 @@ var resturantList = exports.resturantList = [{
     }
   }
 }, {
-  type: 'resturant',
+  type: "resturant",
   info: {
-    "id": "826586",
-    "name": "Pastas By Pizza Hut",
-    "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/4/1/e77822ad-4e01-4a38-ae6b-f50cd19352dd_826586.JPG",
-    "locality": "Phooti Kothi",
-    "areaName": "Sudama Nagar",
-    "costForTwo": "₹400 for two",
-    "cuisines": ["Pastas"],
-    "avgRating": 3.6,
-    "parentId": "306806",
-    "avgRatingString": "3.6",
-    "totalRatingsString": "10+",
-    "sla": {
-      "deliveryTime": 35,
-      "lastMileTravel": 3.9,
-      "serviceability": "SERVICEABLE",
-      "slaString": "35-40 mins",
-      "lastMileTravelString": "3.9 km",
-      "iconType": "ICON_TYPE_EMPTY"
+    id: "826586",
+    name: "Pastas By Pizza Hut",
+    cloudinaryImageId: "RX_THUMBNAIL/IMAGES/VENDOR/2024/4/1/e77822ad-4e01-4a38-ae6b-f50cd19352dd_826586.JPG",
+    locality: "Phooti Kothi",
+    areaName: "Sudama Nagar",
+    costForTwo: "₹400 for two",
+    cuisines: ["Pastas"],
+    avgRating: 3.6,
+    parentId: "306806",
+    avgRatingString: "3.6",
+    totalRatingsString: "10+",
+    sla: {
+      deliveryTime: 35,
+      lastMileTravel: 3.9,
+      serviceability: "SERVICEABLE",
+      slaString: "35-40 mins",
+      lastMileTravelString: "3.9 km",
+      iconType: "ICON_TYPE_EMPTY"
     }
   }
 }, {
-  type: 'resturant',
+  type: "resturant",
   info: {
-    "id": "581971",
-    "name": "Pizza Hut",
-    "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/7/17/93a8ff76-89f2-4ed3-8cb2-43ed8361200f_581971.jpg",
-    "locality": "Airport Road",
-    "areaName": "Kalani Nagar",
-    "costForTwo": "₹350 for two",
-    "cuisines": ["Pizzas"],
-    "avgRating": 4.2,
-    "parentId": "721",
-    "avgRatingString": "4.2",
-    "totalRatingsString": "1K+",
-    "sla": {
-      "deliveryTime": 20,
-      "lastMileTravel": 1.5,
-      "serviceability": "SERVICEABLE",
-      "slaString": "20-25 mins",
-      "lastMileTravelString": "1.5 km",
-      "iconType": "ICON_TYPE_EMPTY"
+    id: "581971",
+    name: "Pizza Hut",
+    cloudinaryImageId: "RX_THUMBNAIL/IMAGES/VENDOR/2024/7/17/93a8ff76-89f2-4ed3-8cb2-43ed8361200f_581971.jpg",
+    locality: "Airport Road",
+    areaName: "Kalani Nagar",
+    costForTwo: "₹350 for two",
+    cuisines: ["Pizzas"],
+    avgRating: 4.2,
+    parentId: "721",
+    avgRatingString: "4.2",
+    totalRatingsString: "1K+",
+    sla: {
+      deliveryTime: 20,
+      lastMileTravel: 1.5,
+      serviceability: "SERVICEABLE",
+      slaString: "20-25 mins",
+      lastMileTravelString: "1.5 km",
+      iconType: "ICON_TYPE_EMPTY"
     }
   }
 }, {
-  type: 'resturant',
+  type: "resturant",
   info: {
-    "id": "70800",
-    "name": "McDonald's",
-    "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/4/1/fedaee6f-c5e9-4f19-8188-93627e6d6776_70800.JPG",
-    "locality": "Malhar Mega Mall",
-    "areaName": "Scheme 54 Pu4",
-    "costForTwo": "₹400 for two",
-    "cuisines": ["Burgers", "Beverages", "Cafe", "Desserts"],
-    "avgRating": 4.4,
-    "parentId": "630",
-    "avgRatingString": "4.4",
-    "totalRatingsString": "5K+",
-    "sla": {
-      "deliveryTime": 36,
-      "lastMileTravel": 8.3,
-      "serviceability": "SERVICEABLE",
-      "slaString": "35-40 mins",
-      "lastMileTravelString": "8.3 km",
-      "iconType": "ICON_TYPE_EMPTY"
+    id: "70800",
+    name: "McDonald's",
+    cloudinaryImageId: "RX_THUMBNAIL/IMAGES/VENDOR/2024/4/1/fedaee6f-c5e9-4f19-8188-93627e6d6776_70800.JPG",
+    locality: "Malhar Mega Mall",
+    areaName: "Scheme 54 Pu4",
+    costForTwo: "₹400 for two",
+    cuisines: ["Burgers", "Beverages", "Cafe", "Desserts"],
+    avgRating: 4.4,
+    parentId: "630",
+    avgRatingString: "4.4",
+    totalRatingsString: "5K+",
+    sla: {
+      deliveryTime: 36,
+      lastMileTravel: 8.3,
+      serviceability: "SERVICEABLE",
+      slaString: "35-40 mins",
+      lastMileTravelString: "8.3 km",
+      iconType: "ICON_TYPE_EMPTY"
     }
   }
 }, {
-  type: 'resturant',
+  type: "resturant",
   info: {
-    "id": "192426",
-    "name": "McCafe by McDonald's",
-    "cloudinaryImageId": "wffhtjwplmfoxtg8y4s7",
-    "locality": "Orange Business Park",
-    "areaName": "Bhawarkuan Main Road",
-    "costForTwo": "₹250 for two",
-    "cuisines": ["American", "Beverages", "Desserts"],
-    "avgRating": 4.1,
-    "parentId": "8263",
-    "avgRatingString": "4.1",
-    "totalRatingsString": "100+",
-    "sla": {
-      "deliveryTime": 32,
-      "lastMileTravel": 5.6,
-      "serviceability": "SERVICEABLE",
-      "slaString": "30-35 mins",
-      "lastMileTravelString": "5.6 km",
-      "iconType": "ICON_TYPE_EMPTY"
+    id: "192426",
+    name: "McCafe by McDonald's",
+    cloudinaryImageId: "wffhtjwplmfoxtg8y4s7",
+    locality: "Orange Business Park",
+    areaName: "Bhawarkuan Main Road",
+    costForTwo: "₹250 for two",
+    cuisines: ["American", "Beverages", "Desserts"],
+    avgRating: 4.1,
+    parentId: "8263",
+    avgRatingString: "4.1",
+    totalRatingsString: "100+",
+    sla: {
+      deliveryTime: 32,
+      lastMileTravel: 5.6,
+      serviceability: "SERVICEABLE",
+      slaString: "30-35 mins",
+      lastMileTravelString: "5.6 km",
+      iconType: "ICON_TYPE_EMPTY"
     }
   }
 }, {
-  type: 'resturant',
+  type: "resturant",
   info: {
-    "id": "630711",
-    "name": "The Belgian Waffle Co.",
-    "cloudinaryImageId": "5116a385bac0548e06c33c08350fbf11",
-    "locality": "Sapna Sangeeta",
-    "areaName": "Khatiwala Tank",
-    "costForTwo": "₹200 for two",
-    "cuisines": ["Waffle", "Desserts", "Ice Cream"],
-    "avgRating": 4.6,
-    "veg": true,
-    "parentId": "2233",
-    "avgRatingString": "4.6",
-    "totalRatingsString": "1K+",
-    "sla": {
-      "deliveryTime": 33,
-      "lastMileTravel": 5,
-      "serviceability": "SERVICEABLE",
-      "slaString": "30-35 mins",
-      "lastMileTravelString": "5.0 km",
-      "iconType": "ICON_TYPE_EMPTY"
+    id: "630711",
+    name: "The Belgian Waffle Co.",
+    cloudinaryImageId: "5116a385bac0548e06c33c08350fbf11",
+    locality: "Sapna Sangeeta",
+    areaName: "Khatiwala Tank",
+    costForTwo: "₹200 for two",
+    cuisines: ["Waffle", "Desserts", "Ice Cream"],
+    avgRating: 4.6,
+    veg: true,
+    parentId: "2233",
+    avgRatingString: "4.6",
+    totalRatingsString: "1K+",
+    sla: {
+      deliveryTime: 33,
+      lastMileTravel: 5,
+      serviceability: "SERVICEABLE",
+      slaString: "30-35 mins",
+      lastMileTravelString: "5.0 km",
+      iconType: "ICON_TYPE_EMPTY"
     }
   }
 }, {
-  type: 'resturant',
+  type: "resturant",
   info: {
-    "id": "566282",
-    "name": "Faasos' Signature Wraps & Rolls",
-    "cloudinaryImageId": "c583ca6ce40b426797a78ae2ac91f2ec",
-    "locality": "Raghav Regency",
-    "areaName": "Sudama Nagar",
-    "costForTwo": "₹350 for two",
-    "cuisines": ["Fast Food", "Snacks", "North Indian", "Desserts", "Beverages"],
-    "avgRating": 4.1,
-    "parentId": "340366",
-    "avgRatingString": "4.1",
-    "totalRatingsString": "100+",
-    "sla": {
-      "deliveryTime": 33,
-      "lastMileTravel": 4.1,
-      "serviceability": "SERVICEABLE",
-      "slaString": "30-35 mins",
-      "lastMileTravelString": "4.1 km",
-      "iconType": "ICON_TYPE_EMPTY"
+    id: "566282",
+    name: "Faasos' Signature Wraps & Rolls",
+    cloudinaryImageId: "c583ca6ce40b426797a78ae2ac91f2ec",
+    locality: "Raghav Regency",
+    areaName: "Sudama Nagar",
+    costForTwo: "₹350 for two",
+    cuisines: ["Fast Food", "Snacks", "North Indian", "Desserts", "Beverages"],
+    avgRating: 4.1,
+    parentId: "340366",
+    avgRatingString: "4.1",
+    totalRatingsString: "100+",
+    sla: {
+      deliveryTime: 33,
+      lastMileTravel: 4.1,
+      serviceability: "SERVICEABLE",
+      slaString: "30-35 mins",
+      lastMileTravelString: "4.1 km",
+      iconType: "ICON_TYPE_EMPTY"
     }
   }
 }, {
-  type: 'resturant',
+  type: "resturant",
   info: {
-    "id": "714096",
-    "name": "Go Zero Ice Creams & Desserts",
-    "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/4/23/abb8a1dc-ff69-4d04-b0a4-bf01b06b3156_714096.JPG",
-    "locality": "Raghav Regency",
-    "areaName": "SUDAMA NAGAR",
-    "costForTwo": "₹150 for two",
-    "cuisines": ["Ice Cream", "Desserts", "Healthy Food"],
-    "avgRating": 4.2,
-    "veg": true,
-    "parentId": "343689",
-    "avgRatingString": "4.2",
-    "totalRatingsString": "100+",
-    "sla": {
-      "deliveryTime": 27,
-      "lastMileTravel": 4.2,
-      "serviceability": "SERVICEABLE",
-      "slaString": "25-30 mins",
-      "lastMileTravelString": "4.2 km",
-      "iconType": "ICON_TYPE_EMPTY"
+    id: "714096",
+    name: "Go Zero Ice Creams & Desserts",
+    cloudinaryImageId: "RX_THUMBNAIL/IMAGES/VENDOR/2024/4/23/abb8a1dc-ff69-4d04-b0a4-bf01b06b3156_714096.JPG",
+    locality: "Raghav Regency",
+    areaName: "SUDAMA NAGAR",
+    costForTwo: "₹150 for two",
+    cuisines: ["Ice Cream", "Desserts", "Healthy Food"],
+    avgRating: 4.2,
+    veg: true,
+    parentId: "343689",
+    avgRatingString: "4.2",
+    totalRatingsString: "100+",
+    sla: {
+      deliveryTime: 27,
+      lastMileTravel: 4.2,
+      serviceability: "SERVICEABLE",
+      slaString: "25-30 mins",
+      lastMileTravelString: "4.2 km",
+      iconType: "ICON_TYPE_EMPTY"
     }
   }
 }, {
-  type: 'resturant',
+  type: "resturant",
   info: {
-    "id": "575049",
-    "name": "Veg Daawat by Behrouz",
-    "cloudinaryImageId": "2b579171cefc545ce6479e21c0016798",
-    "locality": "D Sector",
-    "areaName": "Sudama Nagar",
-    "costForTwo": "₹700 for two",
-    "cuisines": ["Biryani", "North Indian", "Kebabs", "Mughlai", "Beverages", "Desserts"],
-    "avgRating": 4.5,
-    "veg": true,
-    "parentId": "344904",
-    "avgRatingString": "4.5",
-    "totalRatingsString": "20+",
-    "sla": {
-      "deliveryTime": 26,
-      "lastMileTravel": 4.1,
-      "serviceability": "SERVICEABLE",
-      "slaString": "25-30 mins",
-      "lastMileTravelString": "4.1 km",
-      "iconType": "ICON_TYPE_EMPTY"
+    id: "575049",
+    name: "Veg Daawat by Behrouz",
+    cloudinaryImageId: "2b579171cefc545ce6479e21c0016798",
+    locality: "D Sector",
+    areaName: "Sudama Nagar",
+    costForTwo: "₹700 for two",
+    cuisines: ["Biryani", "North Indian", "Kebabs", "Mughlai", "Beverages", "Desserts"],
+    avgRating: 4.5,
+    veg: true,
+    parentId: "344904",
+    avgRatingString: "4.5",
+    totalRatingsString: "20+",
+    sla: {
+      deliveryTime: 26,
+      lastMileTravel: 4.1,
+      serviceability: "SERVICEABLE",
+      slaString: "25-30 mins",
+      lastMileTravelString: "4.1 km",
+      iconType: "ICON_TYPE_EMPTY"
     }
   }
 }, {
-  type: 'resturant',
+  type: "resturant",
   info: {
-    "id": "263735",
-    "name": "Shravan Specials by Lunchbox",
-    "cloudinaryImageId": "k5rppynokexzna1caaca",
-    "locality": "Raghav Regency",
-    "areaName": "Sudama Nagar",
-    "costForTwo": "₹200 for two",
-    "cuisines": ["Biryani", "North Indian", "Desserts", "Beverages"],
-    "avgRating": 4.3,
-    "parentId": "21938",
-    "avgRatingString": "4.3",
-    "totalRatingsString": "100+",
-    "sla": {
-      "deliveryTime": 29,
-      "lastMileTravel": 4.1,
-      "serviceability": "SERVICEABLE",
-      "slaString": "25-30 mins",
-      "lastMileTravelString": "4.1 km",
-      "iconType": "ICON_TYPE_EMPTY"
+    id: "263735",
+    name: "Shravan Specials by Lunchbox",
+    cloudinaryImageId: "k5rppynokexzna1caaca",
+    locality: "Raghav Regency",
+    areaName: "Sudama Nagar",
+    costForTwo: "₹200 for two",
+    cuisines: ["Biryani", "North Indian", "Desserts", "Beverages"],
+    avgRating: 4.3,
+    parentId: "21938",
+    avgRatingString: "4.3",
+    totalRatingsString: "100+",
+    sla: {
+      deliveryTime: 29,
+      lastMileTravel: 4.1,
+      serviceability: "SERVICEABLE",
+      slaString: "25-30 mins",
+      lastMileTravelString: "4.1 km",
+      iconType: "ICON_TYPE_EMPTY"
     }
   }
 }, {
-  type: 'resturant',
+  type: "resturant",
   info: {
-    "id": "801296",
-    "name": "Makhani Darbar",
-    "cloudinaryImageId": "c583da4b69d264ffe705e5918fad0e98",
-    "locality": "Annapoorna FC",
-    "areaName": "Raghav Regency",
-    "costForTwo": "₹500 for two",
-    "cuisines": ["Biryani", "North Indian", "Kebabs", "Mughlai", "Beverages", "Desserts"],
-    "avgRating": 2.3,
-    "parentId": "478595",
-    "avgRatingString": "2.3",
-    "totalRatingsString": "3",
-    "sla": {
-      "deliveryTime": 33,
-      "lastMileTravel": 4.1,
-      "serviceability": "SERVICEABLE",
-      "slaString": "30-35 mins",
-      "lastMileTravelString": "4.1 km",
-      "iconType": "ICON_TYPE_EMPTY"
+    id: "801296",
+    name: "Makhani Darbar",
+    cloudinaryImageId: "c583da4b69d264ffe705e5918fad0e98",
+    locality: "Annapoorna FC",
+    areaName: "Raghav Regency",
+    costForTwo: "₹500 for two",
+    cuisines: ["Biryani", "North Indian", "Kebabs", "Mughlai", "Beverages", "Desserts"],
+    avgRating: 2.3,
+    parentId: "478595",
+    avgRatingString: "2.3",
+    totalRatingsString: "3",
+    sla: {
+      deliveryTime: 33,
+      lastMileTravel: 4.1,
+      serviceability: "SERVICEABLE",
+      slaString: "30-35 mins",
+      lastMileTravelString: "4.1 km",
+      iconType: "ICON_TYPE_EMPTY"
     }
   }
 }, {
-  type: 'resturant',
+  type: "resturant",
   info: {
-    "id": "536863",
-    "name": "La Pino'z Pizza",
-    "cloudinaryImageId": "5fe4444a065b60c4fe39ef975222c12b",
-    "locality": "kalani Nagar",
-    "areaName": "Sarafa",
-    "costForTwo": "₹400 for two",
-    "cuisines": ["Pizzas", "Pastas", "Italian", "Desserts", "Beverages"],
-    "avgRating": 4.1,
-    "veg": true,
-    "parentId": "4961",
-    "avgRatingString": "4.1",
-    "totalRatingsString": "1K+",
-    "sla": {
-      "deliveryTime": 19,
-      "lastMileTravel": 1.5,
-      "serviceability": "SERVICEABLE",
-      "slaString": "15-20 mins",
-      "lastMileTravelString": "1.5 km",
-      "iconType": "ICON_TYPE_EMPTY"
+    id: "536863",
+    name: "La Pino'z Pizza",
+    cloudinaryImageId: "5fe4444a065b60c4fe39ef975222c12b",
+    locality: "kalani Nagar",
+    areaName: "Sarafa",
+    costForTwo: "₹400 for two",
+    cuisines: ["Pizzas", "Pastas", "Italian", "Desserts", "Beverages"],
+    avgRating: 4.1,
+    veg: true,
+    parentId: "4961",
+    avgRatingString: "4.1",
+    totalRatingsString: "1K+",
+    sla: {
+      deliveryTime: 19,
+      lastMileTravel: 1.5,
+      serviceability: "SERVICEABLE",
+      slaString: "15-20 mins",
+      lastMileTravelString: "1.5 km",
+      iconType: "ICON_TYPE_EMPTY"
     }
   }
 }, {
-  type: 'resturant',
+  type: "resturant",
   info: {
-    "id": "156145",
-    "name": "The Good Bowl",
-    "cloudinaryImageId": "6e04be27387483a7c00444f8e8241108",
-    "locality": "Annapoorna FC",
-    "areaName": "Sudama Nagar",
-    "costForTwo": "₹400 for two",
-    "cuisines": ["Biryani", "North Indian", "Pastas", "Punjabi", "Desserts", "Beverages"],
-    "avgRating": 4.2,
-    "parentId": "7918",
-    "avgRatingString": "4.2",
-    "totalRatingsString": "1K+",
-    "sla": {
-      "deliveryTime": 29,
-      "lastMileTravel": 4.1,
-      "serviceability": "SERVICEABLE",
-      "slaString": "25-30 mins",
-      "lastMileTravelString": "4.1 km",
-      "iconType": "ICON_TYPE_EMPTY"
+    id: "156145",
+    name: "The Good Bowl",
+    cloudinaryImageId: "6e04be27387483a7c00444f8e8241108",
+    locality: "Annapoorna FC",
+    areaName: "Sudama Nagar",
+    costForTwo: "₹400 for two",
+    cuisines: ["Biryani", "North Indian", "Pastas", "Punjabi", "Desserts", "Beverages"],
+    avgRating: 4.2,
+    parentId: "7918",
+    avgRatingString: "4.2",
+    totalRatingsString: "1K+",
+    sla: {
+      deliveryTime: 29,
+      lastMileTravel: 4.1,
+      serviceability: "SERVICEABLE",
+      slaString: "25-30 mins",
+      lastMileTravelString: "4.1 km",
+      iconType: "ICON_TYPE_EMPTY"
     }
   }
 }, {
-  type: 'resturant',
+  type: "resturant",
   info: {
-    "id": "770309",
-    "name": "Keventers - Milkshakes & Desserts",
-    "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/6/20/5c0cf9a2-1195-4825-956b-bf00c6660d91_770309.JPG",
-    "locality": "Sapna Sangeeta Road",
-    "areaName": "Narendra Chamber",
-    "costForTwo": "₹300 for two",
-    "cuisines": ["Beverages", "Ice Cream", "Desserts", "Healthy Food"],
-    "avgRating": 4.5,
-    "veg": true,
-    "parentId": "268997",
-    "avgRatingString": "4.5",
-    "totalRatingsString": "100+",
-    "sla": {
-      "deliveryTime": 28,
-      "lastMileTravel": 5,
-      "serviceability": "SERVICEABLE",
-      "slaString": "25-30 mins",
-      "lastMileTravelString": "5.0 km",
-      "iconType": "ICON_TYPE_EMPTY"
+    id: "770309",
+    name: "Keventers - Milkshakes & Desserts",
+    cloudinaryImageId: "RX_THUMBNAIL/IMAGES/VENDOR/2024/6/20/5c0cf9a2-1195-4825-956b-bf00c6660d91_770309.JPG",
+    locality: "Sapna Sangeeta Road",
+    areaName: "Narendra Chamber",
+    costForTwo: "₹300 for two",
+    cuisines: ["Beverages", "Ice Cream", "Desserts", "Healthy Food"],
+    avgRating: 4.5,
+    veg: true,
+    parentId: "268997",
+    avgRatingString: "4.5",
+    totalRatingsString: "100+",
+    sla: {
+      deliveryTime: 28,
+      lastMileTravel: 5,
+      serviceability: "SERVICEABLE",
+      slaString: "25-30 mins",
+      lastMileTravelString: "5.0 km",
+      iconType: "ICON_TYPE_EMPTY"
     }
   }
 }, {
-  type: 'resturant',
+  type: "resturant",
   info: {
-    "id": "80652",
-    "name": "Firangi Bake",
-    "cloudinaryImageId": "v9qsbs5qxvtq8jln33sw",
-    "locality": "Raghav Regency",
-    "areaName": "Sudama Nagar",
-    "costForTwo": "₹400 for two",
-    "cuisines": ["Pizzas", "Pastas", "Italian", "Mexican", "Healthy Food", "Desserts", "Beverages"],
-    "avgRating": 4.3,
-    "parentId": "3952",
-    "avgRatingString": "4.3",
-    "totalRatingsString": "500+",
-    "sla": {
-      "deliveryTime": 31,
-      "lastMileTravel": 4.1,
-      "serviceability": "SERVICEABLE",
-      "slaString": "30-35 mins",
-      "lastMileTravelString": "4.1 km",
-      "iconType": "ICON_TYPE_EMPTY"
+    id: "80652",
+    name: "Firangi Bake",
+    cloudinaryImageId: "v9qsbs5qxvtq8jln33sw",
+    locality: "Raghav Regency",
+    areaName: "Sudama Nagar",
+    costForTwo: "₹400 for two",
+    cuisines: ["Pizzas", "Pastas", "Italian", "Mexican", "Healthy Food", "Desserts", "Beverages"],
+    avgRating: 4.3,
+    parentId: "3952",
+    avgRatingString: "4.3",
+    totalRatingsString: "500+",
+    sla: {
+      deliveryTime: 31,
+      lastMileTravel: 4.1,
+      serviceability: "SERVICEABLE",
+      slaString: "30-35 mins",
+      lastMileTravelString: "4.1 km",
+      iconType: "ICON_TYPE_EMPTY"
     }
   }
 }, {
-  type: 'resturant',
+  type: "resturant",
   info: {
-    "id": "80653",
-    "name": "Sweet Truth - Cake and Desserts",
-    "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/7/2/eb5eafc7-0a8d-4d7c-93d6-388084641096_80653.JPG",
-    "locality": "Raghav Regency",
-    "areaName": "Sudama Nagar",
-    "costForTwo": "₹450 for two",
-    "cuisines": ["Snacks", "Bakery", "Desserts", "Beverages"],
-    "avgRating": 4.4,
-    "parentId": "4444",
-    "avgRatingString": "4.4",
-    "totalRatingsString": "1K+",
-    "sla": {
-      "deliveryTime": 22,
-      "lastMileTravel": 4.1,
-      "serviceability": "SERVICEABLE",
-      "slaString": "20-25 mins",
-      "lastMileTravelString": "4.1 km",
-      "iconType": "ICON_TYPE_EMPTY"
+    id: "80653",
+    name: "Sweet Truth - Cake and Desserts",
+    cloudinaryImageId: "RX_THUMBNAIL/IMAGES/VENDOR/2024/7/2/eb5eafc7-0a8d-4d7c-93d6-388084641096_80653.JPG",
+    locality: "Raghav Regency",
+    areaName: "Sudama Nagar",
+    costForTwo: "₹450 for two",
+    cuisines: ["Snacks", "Bakery", "Desserts", "Beverages"],
+    avgRating: 4.4,
+    parentId: "4444",
+    avgRatingString: "4.4",
+    totalRatingsString: "1K+",
+    sla: {
+      deliveryTime: 22,
+      lastMileTravel: 4.1,
+      serviceability: "SERVICEABLE",
+      slaString: "20-25 mins",
+      lastMileTravelString: "4.1 km",
+      iconType: "ICON_TYPE_EMPTY"
     }
   }
 }];
 var IMG_CDN = exports.IMG_CDN = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
-var FETCH_URL = exports.FETCH_URL = 'https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=22.71700&lng=75.83370&restaurantId=';
+var FETCH_URL = exports.FETCH_URL = "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=22.71700&lng=75.83370&restaurantId=";
 },{}],"src/components/RestaurantCard.js":[function(require,module,exports) {
 "use strict";
 
@@ -39192,11 +39199,11 @@ var RestaurantCard = function RestaurantCard(_ref) {
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "card ",
     style: {
-      border: '1px solid black'
+      border: "1px solid black"
     }
   }, /*#__PURE__*/_react.default.createElement("img", {
     src: _Constants.IMG_CDN + cloudinaryImageId
-  }), /*#__PURE__*/_react.default.createElement("h6", null, name), /*#__PURE__*/_react.default.createElement("h6", null, cuisines), /*#__PURE__*/_react.default.createElement("h6", null, avgRatingString));
+  }), /*#__PURE__*/_react.default.createElement("h6", null, name), /*#__PURE__*/_react.default.createElement("h6", null, cuisines.join(" ")), /*#__PURE__*/_react.default.createElement("h6", null, avgRatingString));
 };
 var _default = exports.default = RestaurantCard;
 },{"../../Constants":"Constants.js","react":"node_modules/react/index.js"}],"src/components/ShimmerBody.js":[function(require,module,exports) {
@@ -39338,7 +39345,7 @@ var Body = function Body() {
   }, filterrestaurants === null || filterrestaurants === void 0 ? void 0 : filterrestaurants.map(function (resturant) {
     var _resturant$info2;
     return /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-      to: '/restaurant/' + resturant.info.id,
+      to: "/restaurant/" + resturant.info.id,
       key: resturant === null || resturant === void 0 || (_resturant$info2 = resturant.info) === null || _resturant$info2 === void 0 ? void 0 : _resturant$info2.id,
       className: "newlist"
     }, /*#__PURE__*/_react.default.createElement(_RestaurantCard.default, resturant === null || resturant === void 0 ? void 0 : resturant.info));
@@ -39392,7 +39399,7 @@ var RestaurantMenu = function RestaurantMenu() {
         while (1) switch (_context.prev = _context.next) {
           case 0:
             _context.next = 2;
-            return fetch(_Constants.FETCH_URL + id + '&catalog_qa=undefined&submitAction=ENTER');
+            return fetch(_Constants.FETCH_URL + id + "&catalog_qa=undefined&submitAction=ENTER");
           case 2:
             data = _context.sent;
             _context.next = 5;
@@ -39420,7 +39427,7 @@ var RestaurantMenu = function RestaurantMenu() {
     className: "menu"
   }, /*#__PURE__*/_react.default.createElement("table", {
     className: "table"
-  }, /*#__PURE__*/_react.default.createElement("tr", {
+  }, /*#__PURE__*/_react.default.createElement("tbody", null, /*#__PURE__*/_react.default.createElement("tr", {
     className: "menuheading1"
   }, /*#__PURE__*/_react.default.createElement("th", {
     className: "menuheading"
@@ -39452,7 +39459,7 @@ var RestaurantMenu = function RestaurantMenu() {
     return /*#__PURE__*/_react.default.createElement("li", {
       key: item === null || item === void 0 || (_item$card = item.card) === null || _item$card === void 0 || (_item$card = _item$card.info) === null || _item$card === void 0 ? void 0 : _item$card.id
     }, item === null || item === void 0 || (_item$card2 = item.card) === null || _item$card2 === void 0 || (_item$card2 = _item$card2.info) === null || _item$card2 === void 0 ? void 0 : _item$card2.name, " ");
-  })))))));
+  }))))))));
 };
 var _default = exports.default = RestaurantMenu;
 },{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/dist/index.js","../../Constants":"Constants.js"}],"src/components/ProfileClass.js":[function(require,module,exports) {
@@ -39498,12 +39505,12 @@ var Profile = /*#__PURE__*/function (_Component) {
   }, {
     key: "componentDidUpdate",
     value: function componentDidUpdate() {
-      console.log('component did update');
+      console.log("component did update");
     }
   }, {
     key: "componentWillUnmount",
     value: function componentWillUnmount() {
-      console.log('component will unmount');
+      console.log("component will unmount");
     }
   }, {
     key: "render",
@@ -39606,29 +39613,29 @@ var About = (0, _react.lazy)(function () {
   return require("_bundle_loader")(require.resolve("./src/components/About"));
 });
 var appRouter = (0, _reactRouterDom.createBrowserRouter)([{
-  path: '/',
+  path: "/",
   element: /*#__PURE__*/_react.default.createElement(_Applayout.default, null),
   errorElement: /*#__PURE__*/_react.default.createElement(_Error.default, null),
   children: [{
-    path: '/about',
+    path: "/about",
     element: /*#__PURE__*/_react.default.createElement(_react.Suspense, {
       fallback: /*#__PURE__*/_react.default.createElement("h1", null, "loading...")
     }, /*#__PURE__*/_react.default.createElement(About, null)),
     children: [{
-      path: 'profile',
+      path: "profile",
       element: /*#__PURE__*/_react.default.createElement(_ProfileClass.default, null)
     }]
   }, {
-    path: '/contact',
+    path: "/contact",
     element: /*#__PURE__*/_react.default.createElement(_Contact.default, null)
   }, {
-    path: '/cart',
+    path: "/cart",
     element: /*#__PURE__*/_react.default.createElement(_Cart.default, null)
   }, {
-    path: '/',
+    path: "/",
     element: /*#__PURE__*/_react.default.createElement(_Body.default, null)
   }, {
-    path: '/restaurant/:id',
+    path: "/restaurant/:id",
     element: /*#__PURE__*/_react.default.createElement(_RestaurnatMenu.default, null)
   }]
 }]);
@@ -39661,7 +39668,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59936" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50259" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

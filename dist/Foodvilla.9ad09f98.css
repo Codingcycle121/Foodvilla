@@ -1,212 +1,215 @@
-.header{
-    display: flex;
-    justify-content: space-between;
-    margin: 10px;
-    border: 1px solid black;
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+  border: 1px solid black;
 }
 
-.nav-items > ul{
-    list-style: none;
-    margin-right:10px;
-    display: flex;
+.nav-items > ul {
+  list-style: none;
+  margin-right: 10px;
+  display: flex;
 }
 
 /* .header:hover{
 background-image: linear-gradient(to right, #fdbb2d,#22c1c3);
 } */
 
-body{
-    background-image: linear-gradient(to right, rgba(250, 248, 248, 0), rgb(44, 243, 77));
-    /* background-image: linear-gradient(#e0dff2,#1515a8,#00d4ff); */
+body {
+  background-image: linear-gradient(
+    to right,
+    rgba(250, 248, 248, 0),
+    rgb(44, 243, 77)
+  );
+  /* background-image: linear-gradient(#e0dff2,#1515a8,#00d4ff); */
 }
 
-.item:hover{
-    color: #ffffff;
-    
-    transition: color  .5s;
+.item:hover {
+  color: #ffffff;
+
+  transition: color 0.5s;
 }
 
-.nav-items >ul>a{
-    text-decoration: none;
-    color:black;
-    padding: 10px;
-    margin-top: 20px;
-    cursor: default;
+.nav-items > ul > a {
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+  margin-top: 20px;
+  cursor: default;
 }
 
-.nav-items > ul >li{
-    padding: 10px;
+.nav-items > ul > li {
+  padding: 10px;
 }
 
-.logo{
-    width: 90px;
+.logo {
+  width: 90px;
 }
 
-.footer-logo{
-    width: 90px;
+.footer-logo {
+  width: 90px;
 }
 
-.card{
-    display: flex;
-    width: 220px;
-    height: 95%;
-    padding: 5px;
-    margin: 10px;
-    font-size: 15px;
-    color: black;
-
+.card {
+  display: flex;
+  width: 220px;
+  height: 95%;
+  padding: 5px;
+  margin: 10px;
+  font-size: 15px;
+  color: black;
 }
 
-.card:hover{
-    background-image: linear-gradient(to left,#f1f1f1,#938c8c);
-    opacity: 0.95;
-    transition: opacity .53s;
-    cursor:default;
+.card:hover {
+  background-image: linear-gradient(to left, #f1f1f1, #938c8c);
+  opacity: 0.95;
+  transition: opacity 0.53s;
+  cursor: default;
 }
 
-.card >img{
-    width: 200px;
-    height: 200px;
-    
+.card > img {
+  width: 200px;
+  height: 200px;
 }
 
-.restaurant-list{
-    display: flex;
-    flex-wrap: wrap;
-    
-    /* align-content: flex-start; */
-  
+.restaurant-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  /* align-content: flex-start; */
 }
 
-.newlist{
-    text-decoration: none;
-    display: flex;
-    cursor: default;
+.newlist {
+  text-decoration: none;
+  display: flex;
+  cursor: default;
 }
-.footer{
-    display: flex;
-    /* margin: 10px; */
-    margin-top: 5%;
-    margin-inline: 10px;
-    color: #383636af;
-    margin-left: 20%;
-    font-size: 40px;
-    font-weight: bolder;
-    justify-content: center;
-    
+.footer {
+  display: flex;
+  /* margin: 10px; */
+  margin-top: 5%;
+  margin-inline: 10px;
+  color: #383636af;
+  margin-left: 20%;
+  font-size: 2.5em;
+  font-weight: bolder;
+  justify-content: center;
 }
-.footer-img{
-    display: flex;
-    flex-wrap: wrap;
-   width:  30%;
-}
-
-.footer2{
-    color: #fff;
-    background-color: rgb(0, 0, 0);
-    opacity: 0.9;
-    /* padding-top: 30%; */
-    display: flex;
-    /* justify-content: center; */
-    padding-top: 5%;
-    padding-bottom: 10%;
-    align-items: center;
-    justify-content: space-evenly;
-    padding-right: 5%;
+.footer-img {
+  display: flex;
+  flex-wrap: wrap;
+  width: 30%;
 }
 
-
-.companylogo{
-   font-size: 18px;
-   font-weight: 700;
-   line-height: 30px;
-   letter-spacing: -.5px;
+.footerimage{
+  max-width: 70%;
+  min-width: 30%
 }
 
-.company-1{
-    list-style: none;
-    line-height: 30px;
-    
+.footer2 {
+  color: #fff;
+  background-color: rgb(0, 0, 0);
+  opacity: 0.9;
+  /* padding-top: 30%; */
+  display: flex;
+  /* justify-content: center; */
+  padding-top: 5%;
+  padding-bottom: 10%;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-right: 5%;
 }
 
-.search,.search-btn{
-    margin: .5rem;
-    
-}
-.search-btn{
-    background-color: rgb(47, 180, 47);
-    padding: 5px;
-    justify-content: center;
-    padding-inline: 30px;
+.companylogo {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: -0.5px;
 }
 
-.error{
-    font-size: 100px;
-    text-align: center;
-    padding-top: 12%;
+.company-1 {
+  list-style: none;
+  line-height: 30px;
 }
 
-.menu{
-    display: flex;
-    
+.search,
+.search-btn {
+  margin: 0.5rem;
 }
-.imgmenu{
-    width: 200px;
-    height: 200px;
-}
-
-.table{
-    margin: 5%;
-    
-}
-.tablehead{
-   padding-inline: 1%;
-   border: 1px solid black;
+.search-btn {
+  background-color: rgb(47, 180, 47);
+  padding: 5px;
+  justify-content: center;
+  padding-inline: 30px;
 }
 
-.tabledatas{
-    font-size: 100%;
-    padding-inline: 1%;
-    font-weight: 700;
-    border: 1px solid black;
-    background-image: linear-gradient(to right #fff,#cbb953);
+.error {
+  font-size: 100px;
+  text-align: center;
+  padding-top: 12%;
 }
 
-
-.tableheading{
-    font-size: 20px;
+.menu {
+  display: flex;
 }
-.menuheading{
-    
-   padding-inline: 45%;
-   font-size: xx-large;
-   
-}
-.menuheading1{
-    border: 1px solid black;
+.imgmenu {
+  width: 200px;
+  height: 200px;
 }
 
-@media(max-width:1018px){
-   .tabledata{
-     box-sizing: border-box;
-     text-wrap: wrap;
-     min-width: 617px;
-   }
-   .menu{
-    font-size: .81em;
-   }
-   body{
-    background-image: linear-gradient(to right, rgba(250, 248, 248, 0), rgb(44, 243, 77));
-    /* background-image: linear-gradient(#e0dff2,#1515a8,#00d4ff); */
+.table {
+  margin: 5%;
 }
-   
-   .header{
-     box-sizing: border-box;
-     
-   }
-   html{
-    min-width: 619px;
-   }
+.tablehead {
+  padding-inline: 1%;
+  border: 1px solid black;
 }
+
+.tabledatas {
+  font-size: 100%;
+  padding-inline: 1%;
+  font-weight: 700;
+  border: 1px solid black;
+  background-image: linear-gradient(to right #fff, #cbb953);
+}
+
+.tableheading {
+  font-size: 20px;
+}
+.menuheading {
+  padding-inline: 45%;
+  font-size: xx-large;
+}
+.menuheading1 {
+  border: 1px solid black;
+}
+
+@media (max-width: 1018px) {
+  .tabledata {
+    box-sizing: border-box;
+    text-wrap: wrap;
+    min-width: 617px;
+  }
+  .menu {
+    font-size: 0.81em;
+  }
+  body {
+    background-image: linear-gradient(
+      to right,
+      rgba(250, 248, 248, 0),
+      rgb(44, 243, 77)
+    );
+  }
+
+  .header {
+    box-sizing: border-box;
+  }
+  html {
+    min-width: 720px;
+    max-width: max-content;
+    margin: 0px;
+  }
+}
+
 
 /*# sourceMappingURL=/Foodvilla.9ad09f98.css.map */
